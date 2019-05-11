@@ -1,1 +1,3 @@
 My new file01.txt into master.
+# a new line
+a new entry
