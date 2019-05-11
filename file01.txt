@@ -1,3 +1,4 @@
 My new file01.txt into master.
 # a new line
-a new entry
+a new entry#ec00 second entry
+#edited after created the branches e.g. #ec00
