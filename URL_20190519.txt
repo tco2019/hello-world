@@ -1,0 +1,88 @@
+Ubuntu
+https://help.ubuntu.com/community/AptGet/Howto
+Kali
+https://www.kali.org/downloads/
+Debian
+https://www.debian.org/doc/manuals/apt-howto/index.en.html
+
+Ansible
+https://github.com/ansible/ansible
+
+Python
+https://github.com/topics/python
+http://inventwithpython.com/
+https://nostarch.com/automatestuff/
+https://docs.python.org/3/search.html?q=from+modul+import+function
+Python PyCon
+https://nedbatchelder.com/text/unipain.html
+Selenium Python
+https://selenium-python.readthedocs.io/navigating.html
+https://selenium-python.readthedocs.io/installation.html
+Anaconda
+http://docs.anaconda.com/anaconda/user-guide/getting-started/
+https://anaconda.org/
+http-prompt
+http://http-prompt.com/
+https://github.com/eliangcs/http-prompt
+Algoirthms
+https://github.com/TheAlgorithms/Python
+Scrapy
+https://www.youtube.com/watch?v=OJ8isyws2yw
+https://github.com/scrapy/scrapy
+Python and QT (Gui)
+https://build-system.fman.io/
+https://build-system.fman.io/linux-gui-programming
+Design Patterns in Python
+https://www.youtube.com/watch?v=bsyjSW46TDg
+https://github.com/faif/python-patterns
+
+Project-based-Learnin
+https://github.com/tuvtran/project-based-learning
+
+100 Days
+https://github.com/Avik-Jain/100-Days-Of-ML-Code
+
+Blockchain
+https://www.explainblockchain.io/
+
+
+Tensorflow
+https://github.com/aymericdamien/TensorFlow-Examples
+https://github.com/pytorch/pytorch
+
+Certboot
+https://github.com/certbot/certbot
+
+SciKit
+https://github.com/scikit-learn/scikit-learn
+
+Regular Expression Toolkit RegEx Pal
+https://www.regexpal.com/
+Regular Expression Onfo
+https://www.regular-expressions.info/
+
+Soup Documentation
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+Go Language
+https://golang.org/pkg/
+https://golang.org/doc/code.html
+https://golang.org/doc/install?download=go1.12.4.windows-amd64.msi
+
+
+Microsoft Azure
+https://azure.microsoft.com/de-de/resources/samples/?sort=0
+https://azure.microsoft.com/de-de/resources/samples/?sort=0&term=github
+
+GitHub
+https://github.com/git/git/blob/master/Documentation/howto/rebase-from-internal-branch.txt
+https://github.com/git/git/blob/master/cache.h
+https://education.github.com/pack
+https://github.com/git-for-windows/git-for-windows.github.io
+https://gitforwindows.org/
+https://tortoisegit.org/download/
+https://git-scm.com/download/gui/windows
+
+Powershell
+https://github.com/PowerShell/PowerShell
+
