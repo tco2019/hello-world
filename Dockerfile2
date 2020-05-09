@@ -32,4 +32,4 @@ RUN apt-get update && \
 #    rm -r /var/cache/apt /var/lib/apt/lists/*
 
 COPY code/sites/mysite ${DOC_ROOT}
-ADD https://code.jquery.com/jquery-${JQEURY_VERSION}.min.js ${DOC_ROOT}/js/
+ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
