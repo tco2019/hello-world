@@ -21,7 +21,7 @@ RUN apt-get update && \
 #    apt-get install -y tzdata && \
     apt-get install -y vim-tiny && \
 	apt-get install -y nginx && \
-	apt-get install -y php7.0
+	apt-get install -y php7.0 && \
 #    apt-get install -y cron && \
 #    apt-get install -y libfuse2 && \
 #    apt-get install -y curlftpfs && \
