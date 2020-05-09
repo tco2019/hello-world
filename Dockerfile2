@@ -2,8 +2,9 @@
 FROM ubuntu:18.04
 ENV TZ="Europe/Amsterdam"
 
+ARG JQUERY_VERSION=3.5.1
 ENV DOC_ROOT /var/www/mysite-dev
-ENV JQUERY_VERSION 3.2.1
+ENV JQUERY_VERSION ${JQUERY_VERSION}
 
 
 LABEL maintainer "tco.0x1@gmail.com"
