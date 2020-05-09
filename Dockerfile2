@@ -6,6 +6,7 @@ ARG JQUERY_VERSION=3.5.1
 ENV DOC_ROOT /var/www/mysite-dev
 ENV JQUERY_VERSION ${JQUERY_VERSION}
 
+#sudo docker build --build-arg JQUERY_VERSION=3.5.0 .
 
 LABEL maintainer "tco.0x1@gmail.com"
 LABEL description "Test_Environments_Version_1.0"
