@@ -18,6 +18,12 @@ ENV JQUERY_VERSION ${JQUERY_VERSION}
 #docker pull howtocodewell/manning-webserver-01:1.2
 #sudo docker run -td howtocodewell/manning-webserver-01:1.2 # run in the backgroud
 #sudo docker run -it howtocodewell/manning-webserver-01:1.2 # interactive terminal
+#sudo docker run --name webserver99 -it howtocodewell/manning-webserver-01:1.2 /bin/bash
+#sudo docker stop xxxx
+#sudo docker restart xxx
+#sudo docker start -i xxx #interactive  -a ist attach
+
+
 
 LABEL maintainer "tco.0x1@gmail.com"
 LABEL description "Test_Environments_Version_1.0"
