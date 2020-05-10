@@ -14,6 +14,7 @@ ENV JQUERY_VERSION ${JQUERY_VERSION}
 #sudo docker tag xxxx-id webserver:1.2
 #sudo docker build -t my-company/webserver:1.0 
 #sudo docker build --build-arg JQUERY_VERSION=3.5.0 -t webito:2.1 .  #
+#docker pull howtocodewell/manning-webserver-01:latest
 
 
 LABEL maintainer "tco.0x1@gmail.com"
