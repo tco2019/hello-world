@@ -15,7 +15,9 @@ ENV JQUERY_VERSION ${JQUERY_VERSION}
 #sudo docker build -t my-company/webserver:1.0 
 #sudo docker build --build-arg JQUERY_VERSION=3.5.0 -t webito:2.1 .  #
 #docker pull howtocodewell/manning-webserver-01:latest
-
+#docker pull howtocodewell/manning-webserver-01:1.2
+#sudo docker run -td howtocodewell/manning-webserver-01:1.2 # run in the backgroud
+#sudo docker run -it howtocodewell/manning-webserver-01:1.2 # interactive terminal
 
 LABEL maintainer "tco.0x1@gmail.com"
 LABEL description "Test_Environments_Version_1.0"
