@@ -4,18 +4,23 @@ docker-machine ip <name>
 
 #ip a 172.17.0.1
 
-sudo docker rename my-sql-test-- mysql
-sudo docker ps
 
-sudo docker pull howtocodewell/manning-webserver-01:1.6 #or
-sudo docker built -t howtocodewell/manning-webserver-01:1.6 . #
-
-#Lecacy way
-sudo docker run --name web-server -p 80:80 --link mysql -d web-test
 
 # mysql
 # read this https://hub.docker.com/_/mysql
 # cd ~/UEB/ex2/mdim/code/mysql
 sudo docker build -t mysql-test-i:1.0 .
 sudo docker run --name mysql-test-con -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=docker_in_motion -d mysql-test-i:1.0
+
+
+sudo docker rename mysql-test-con mysql
+sudo docker ps
+
+sudo docker pull howtocodewell/manning-webserver-01:1.6 #or
+sudo docker built -t howtocodewell/manning-webserver-01:1.6 . #
+
+#Linking
+#Lecacy way
+sudo docker run --name web-server -p 80:80 --link mysql -d web-test
+
 
