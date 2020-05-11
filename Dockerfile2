@@ -22,6 +22,14 @@ ENV JQUERY_VERSION ${JQUERY_VERSION}
 #sudo docker stop xxxx
 #sudo docker restart xxx
 #sudo docker start -i xxx #interactive  -a ist attach
+#sudo docker run -it howtocodewell/manning-webserver-01:1.2 echo "hello world" # sudo docker ps -a
+#sudo docker run -it howtocodewell/manning-webserver-01:1.2 php -v
+#sudo docker run -it howtocodewell/manning-webserver-01:1.2 php -a
+#attach to a container
+#sudo docker exec -it -u www-data vero bash #whoami
+#sudo docker exec -it -u www-data -e DOC_ROOT="/var/www/mysite-dev" vero bash 
+
+
 
 
 
