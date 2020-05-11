@@ -67,8 +67,8 @@ RUN apt-get update && \
 
 USER www-data:www-data
 
-#COPY code/sites/mysite ${DOC_ROOT}
-COPY code/sites/mysite .
+COPY code/sites/mysite ${DOC_ROOT}
+#COPY code/sites/mysite .
 
-#ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
-ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
+ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
+#ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
