@@ -36,6 +36,9 @@ ENV TZ="Europe/Amsterdam"
 #sudo docker build --build-arg JQUERY_VERSION=3.5.0 -t vero1:3.1 . #
 #sudo docker run --name vero1c_3 -it vero1:3.1 bash
 
+#sudo docker stop $(sudo docker ps -q)
+#sudo docker rm $(sudo docker ps -aq)
+
 LABEL maintainer "tco.0x1@gmail.com"
 LABEL description "Test_Environments_Version_1.0"
 LABEL image_type "Nginx Webserver with PHP"
@@ -55,7 +58,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
 #    apt-get install -y nvidia-modprobe && \
 #    echo "Europe/Zurich" > \etc\timezone && \
-    echo "Europe/Zurich" > /etc/timezone && \
+#    echo "Europe/Zurich" > /etc/timezone && \
 #    apt-get install -y tzdata && \
     apt-get install -y vim-tiny && \
 	apt-get install -y nginx && \
@@ -68,6 +71,8 @@ RUN apt-get update && \
     apt-get -y clean 
 #&& \
 #    rm -r /var/cache/apt /var/lib/apt/lists/*
+
+RUN echo "Europe/Zurich" > /etc/timezone
 
 USER www-data:www-data
 
