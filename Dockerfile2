@@ -54,7 +54,8 @@ RUN echo "Europe/Zurich" /
 RUN apt-get update && \  
     apt-get upgrade -y && \
 #    apt-get install -y nvidia-modprobe && \
-    echo "Europe/Zurich" > \etc\timezone && \
+#    echo "Europe/Zurich" > \etc\timezone && \
+    echo "Europe/Zurich" > /etc/timezone && \
 #    apt-get install -y tzdata && \
     apt-get install -y vim-tiny && \
 	apt-get install -y nginx && \
@@ -76,4 +77,4 @@ COPY code/sites/mysite ${DOC_ROOT}
 ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
 #ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
 
-expose 80 443
+EXPOSE 80 443
