@@ -1,4 +1,9 @@
 # Datei Dockerfile
+# https://github.com/pfwd/manning-docker-in-motion/blob/master/code/apache/Dockerfile
+# https://hub.docker.com/u/howtocodewell
+# https://hub.docker.com/r/howtocodewell/manning-webserver-01
+# https://hub.docker.com/r/howtocodewell/manning-webserver-01/tags
+
 FROM ubuntu:18.04
 ENV TZ="Europe/Amsterdam"
 
