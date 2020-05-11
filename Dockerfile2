@@ -2,9 +2,6 @@
 FROM ubuntu:18.04
 ENV TZ="Europe/Amsterdam"
 
-ARG JQUERY_VERSION=3.5.1
-ENV DOC_ROOT /var/www/mysite-dev
-ENV JQUERY_VERSION ${JQUERY_VERSION}
  
 #sudo docker build --build-arg JQUERY_VERSION=3.5.0 .  #
 #sudo docker rm $(sudo docker ps -a -q)
@@ -12,29 +9,38 @@ ENV JQUERY_VERSION ${JQUERY_VERSION}
 #sudo docker tag ubuntu:18.04 webserver:1.0 #clone, the same image id
 #sudo docker image rm webserver:1.0
 #sudo docker tag xxxx-id webserver:1.2
+
+#build docker -t giveAname
 #sudo docker build -t my-company/webserver:1.0 
 #sudo docker build --build-arg JQUERY_VERSION=3.5.0 -t webito:2.1 .  #
+
 #docker pull howtocodewell/manning-webserver-01:latest
 #docker pull howtocodewell/manning-webserver-01:1.2
+
 #sudo docker run -td howtocodewell/manning-webserver-01:1.2 # run in the backgroud
 #sudo docker run -it howtocodewell/manning-webserver-01:1.2 # interactive terminal
 #sudo docker run --name webserver99 -it howtocodewell/manning-webserver-01:1.2 /bin/bash
+
 #sudo docker stop xxxx
 #sudo docker restart xxx
 #sudo docker start -i xxx #interactive  -a ist attach
 #sudo docker run -it howtocodewell/manning-webserver-01:1.2 echo "hello world" # sudo docker ps -a
 #sudo docker run -it howtocodewell/manning-webserver-01:1.2 php -v
 #sudo docker run -it howtocodewell/manning-webserver-01:1.2 php -a
+
+#sudo docker run --name vero -it howtocodewell/manning-webserver-01:1.2 /bin/bash
 #attach to a container
 #sudo docker exec -it -u www-data vero bash #whoami
 #sudo docker exec -it -u www-data -e DOC_ROOT="/var/www/mysite-dev" vero bash 
 
-
-
-
-
 LABEL maintainer "tco.0x1@gmail.com"
 LABEL description "Test_Environments_Version_1.0"
+LABEL image_type "Nginx Webserver with PHP"
+
+ARG JQUERY_VERSION=3.5.1
+ENV DOC_ROOT /var/www/mysite-dev
+ENV JQUERY_VERSION ${JQUERY_VERSION}
+
 #WORKDIR ~
 #WORKDIR /tmp/mnt-ftp
 #WORKDIR /tmp
@@ -43,6 +49,7 @@ RUN echo "Europe/Zurich" /
 # Konfiguration durchführen  
 # Anstelle fuse2 muss libfuse2 verwendet werden
 RUN apt-get update && \  
+    apt-get upgrade -y && \
 #    apt-get install -y nvidia-modprobe && \
     echo "Europe/Zurich" > \etc\timezone && \
 #    apt-get install -y tzdata && \
@@ -58,5 +65,10 @@ RUN apt-get update && \
 #&& \
 #    rm -r /var/cache/apt /var/lib/apt/lists/*
 
-COPY code/sites/mysite ${DOC_ROOT}
-ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
+USER www-data:www-data
+
+#COPY code/sites/mysite ${DOC_ROOT}
+COPY code/sites/mysite .
+
+#ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js ${DOC_ROOT}/js/
+ADD https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js js/
