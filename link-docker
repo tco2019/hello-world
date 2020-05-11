@@ -1,5 +1,8 @@
 docker-machine active
 docker-machine ip <name>
+#sudo snap install docker #vorsicht !
+
+#ip a 172.17.0.1
 
 sudo docker rename my-sql-test-- mysql
 sudo docker ps
@@ -7,3 +10,8 @@ sudo docker ps
 sudo docker pull howtocodewell/manning-webserver-01:1.6 #or
 sudo docker built -t howtocodewell/manning-webserver-01:1.6 . #
 
+#Lecacy way
+sudo docker run --name web-server -p 80:80 --link mysql -d web-test
+
+# mysql
+sudo docker build -t mysql-test .
