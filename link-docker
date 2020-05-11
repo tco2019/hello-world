@@ -1,0 +1,9 @@
+docker-machine active
+docker-machine ip <name>
+
+sudo docker rename my-sql-test-- mysql
+sudo docker ps
+
+sudo docker pull howtocodewell/manning-webserver-01:1.6 #or
+sudo docker built -t howtocodewell/manning-webserver-01:1.6 . #
+
