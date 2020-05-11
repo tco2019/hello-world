@@ -33,6 +33,9 @@ ENV TZ="Europe/Amsterdam"
 #sudo docker exec -it -u www-data vero bash #whoami
 #sudo docker exec -it -u www-data -e DOC_ROOT="/var/www/mysite-dev" vero bash 
 
+#sudo docker build --build-arg JQUERY_VERSION=3.5.0 -t vero1:3.1 . #
+#sudo docker run --name vero1c_3 -it vero1:3.1 bash
+
 LABEL maintainer "tco.0x1@gmail.com"
 LABEL description "Test_Environments_Version_1.0"
 LABEL image_type "Nginx Webserver with PHP"
