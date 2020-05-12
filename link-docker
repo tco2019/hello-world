@@ -18,6 +18,8 @@ sudo docker ps
 
 sudo docker pull howtocodewell/manning-webserver-01:1.6 #or
 sudo docker built -t howtocodewell/manning-webserver-01:1.6 . #
+docker pull howtocodewell/manning-database-server-01
+docker pull howtocodewell/manning-webserver-01
 
 #Linking
 #Lecacy way
@@ -29,6 +31,7 @@ sudo apt install net-tools
 netstat -tlnp | grep 80
 sudo netstat -tlnp
 # sudo kill -9 PID
+
 
 sudo docker stop web-server
 suo docker rm -f web-server
@@ -42,5 +45,8 @@ sudo docker network connect manning_net mysql
 sudo docker network connect manning_net web-server
 sudo docker inspect manning_net
 
+sudo docker logs web-server2
+
 sudo fuser -k 80/tcp
+#sudo systemctl status apache
 
