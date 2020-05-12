@@ -1,0 +1,19 @@
+
+sudo docker volume create mysql_data
+sudo docker run --name mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test -d howtocodewell/manning-database-server-01:1.0 
+sudo docker ps
+
+sudo docker inspect mysql
+
+sudo docker exec -it mysql bash
+mysql -u root -p
+#test
+source ./schemas/rebuild.sql
+exit
+eixt
+
+docker rm -f mysql
+sudo docker run --name mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test -d howtocodewell/manning-database-server-01:1.0 
+
+
+
