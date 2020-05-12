@@ -15,5 +15,10 @@ eixt
 docker rm -f mysql
 sudo docker run --name mysql -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test -d howtocodewell/manning-database-server-01:1.0 
 
-
+#Copy files between container and hosts
+touch afilename.txt
+docer cp afilename.txt apache2:/var/www/mysite-dev
+docker exec -it apache2 bash #to check
+#create a file aContainerFile.txt with touch
+docker cp apache2:/var/www/mysite-dev/aContainerFile.txt . #
 
