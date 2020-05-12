@@ -22,3 +22,13 @@ docker exec -it apache2 bash #to check
 #create a file aContainerFile.txt with touch
 docker cp apache2:/var/www/mysite-dev/aContainerFile.txt . #
 
+
+#Create volumes to share with others containers
+sudo docker volume create apache2_logs
+docker rm -f apache2
+docker run --name apache2 --link mysql -p 80:80 -v apache2_logs:/var/log/apache2 -d howtocodewell/manning-webserver-01:1.6
+
+sudo docker run -it --name log_checker --volumes-from apache2 ubuntu
+cd /var/log/apache2
+ls
+tail -f access.log
