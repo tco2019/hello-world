@@ -18,8 +18,16 @@ sudo docker ps
 
 sudo docker pull howtocodewell/manning-webserver-01:1.6 #or
 sudo docker built -t howtocodewell/manning-webserver-01:1.6 . #
+
+sudo docker build -t apache-1-con:1.0 . #übungshalber
+# Database connection mit const DB_HOST = 'mysql'; ändern nach 'mysql-2-con'
+sudo docker run --name mysql-test-2-con -e MYSQL_ROOT_PASSWORD=test -e MYSQL_DATABASE=docker_in_motion -d mysql-test-2-i:latest
+sudo docker exec -it mysql-test-2-con bash
+
 docker pull howtocodewell/manning-database-server-01
 docker pull howtocodewell/manning-webserver-01
+
+#http://172.18.0.3/
 
 #Linking
 #Lecacy way
