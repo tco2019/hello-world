@@ -96,8 +96,18 @@ sudo docker exec -it mysql-test-4-con bash
 #volume bind 
 sudo docker run --name mysql-test-5-con -v mysql-2-data:/var/lib/mysql -v /home/tindaro/UEB/ex2/mdim:/var/www/xyz-directory -e MYSQL_ROOT_PASSWORD=test -d mysql-test-2-i:latest 
 sudo docker exec -it mysql-test-5-con bash
-sudo docker network connect uebung_net mysql
-sudo docker network connect uebung_net web-server
+sudo docker network connect uebung_net mysql-test-5-con
+sudo docker network connect uebung_net apache-1-con
 sudo docker network inspect uebung_net
 http://172.19.0.3/
+
+sudo docker rm -f apache-1-con
+sudo docker volume create apache2-logs
+sudo docker run --name apache-1-con -p 81:81 -v apache2-logs:/var/log/apache2 -d apache-1-i:1.0 
+sudo docker network inspect uebung_net
+sudo docker network connect uebung_net apache-1-con
+
+udo docker run -it --name log-checker --volumes-from apache-1-con ubuntu
+
+
 
