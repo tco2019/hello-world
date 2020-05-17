@@ -87,3 +87,11 @@ sudo docker logs web-server2
 sudo fuser -k 80/tcp
 #sudo systemctl status apache
 
+sudo docker volume create mysql-2-data
+sudo docker run --name mysql-test-3-con -v mysql-2-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test -d mysql-test-2-i:latest 
+sudo docker exec -it mysql-test-4-con bash
+sudo docker run --name mysql-test-4-con -v mysql-2-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=test -d mysql-test-2-i:latest 
+sudo docker exec -it mysql-test-4-con bash
+#volume bind 
+sudo docker run --name mysql-test-5-con -v mysql-2-data:/var/lib/mysql -v /home/tindaro/UEB/ex2/mdim -e MYSQL_ROOT_PASSWORD=test -d mysql-test-2-i:latest 
+sudo docker exec -it mysql-test-5-con bash
