@@ -1,0 +1,4 @@
+https://www.twitch.tv/videos/630066967
+https://www.twitch.tv/manningpublications/
+https://github.com/bootstrapping-microservices/chapter-4/tree/master/example-3/azure-storage
+
